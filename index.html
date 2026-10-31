@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScamShield AI — Think Before You Trust</title>
+  <meta name="description" content="ScamShield AI helps people identify suspicious messages, emails, websites and screenshots. Understand warning signs, evaluate risks and get safe recommendations.">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Light Theme CSS Stylesheets -->
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <link rel="stylesheet" href="styles/sections.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP NAVIGATION BAR (WHITE & CLEAN)
+       ======================================================================== -->
+  <header class="app-header">
+    <div class="container nav-container">
+      
+      <!-- Brand Identity -->
+      <a href="#home" class="brand-logo" data-view-target="view-home" aria-label="ScamShield AI Home">
+        <div class="brand-icon-wrap" data-icon="shield"></div>
+        <div class="brand-text-block">
+          <span class="brand-name">ScamShield <span>AI</span></span>
+          <span class="brand-tagline-micro">Think Before You Trust</span>
+        </div>
+      </a>
+
+      <!-- Main Navigation Links -->
+      <ul class="nav-links" id="nav-links-list">
+        <li><a href="#home" class="nav-link active" data-view-target="view-home">Home</a></li>
+        <li><a href="#checker" class="nav-link" data-view-target="view-checker">Check a Scam</a></li>
+        <li><a href="#reports" class="nav-link" data-view-target="view-reports">My Reports</a></li>
+        <li><a href="#recovery" class="nav-link" data-view-target="view-recovery">Recovery Help</a></li>
+        <li><a href="#about" class="nav-link" data-view-target="view-about">About</a></li>
+        <li class="mobile-nav-cta"><a href="#checker" class="btn btn-primary" data-view-target="view-checker">Check Now</a></li>
+      </ul>
+
+      <!-- Action Button & Mobile Toggle -->
+      <div class="nav-actions">
+        <button type="button" class="btn btn-primary btn-sm" data-view-target="view-checker">
+          Check Now
+        </button>
+        <button type="button" class="mobile-nav-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu" data-icon="menu"></button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN APPLICATION VIEW CONTAINER
+       ======================================================================== -->
+  <main id="main-content">
+
+    <!-- --------------------------------------------------------------------
+         VIEW 1: LANDING PAGE (HOME)
+         -------------------------------------------------------------------- -->
+    <section id="view-home" class="view-panel active-view">
+      
+      <!-- Hero Section (2-Column SaaS Layout) -->
+      <div class="container hero-section">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Value Proposition & CTAs -->
+          <div class="hero-content">
+            <div class="hero-pill">
+              <span data-icon="shieldCheck"></span>
+              <span>Personal Cyber Safety Guardian</span>
+            </div>
+            
+            <h1 class="hero-title">Think Before You Trust.</h1>
+            
+            <p class="hero-description">
+              Stay one step ahead of online scams. Analyse suspicious messages, emails and website links to understand potential threats before you act.
+            </p>
+
+            <div class="hero-actions">
+              <button type="button" class="btn btn-primary btn-lg" data-view-target="view-checker">
+                <span data-icon="shield"></span> Check for Scams
+              </button>
+              <a href="#how-it-works" class="btn btn-secondary btn-lg" onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'}); return false;">
+                <span data-icon="info"></span> Explore How It Works
+              </a>
+            </div>
+
+            <div class="hero-trust-bullets">
+              <div class="trust-bullet-item">
+                <span data-icon="checkCircle"></span> On-demand analysis
+              </div>
+              <div class="trust-bullet-item">
+                <span data-icon="lock"></span> No background monitoring
+              </div>
+              <div class="trust-bullet-item">
+                <span data-icon="shield"></span> You choose what to submit
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Professional Cybersecurity Visual (Sample Analysis Panel) -->
+          <div class="hero-visual">
+            <div class="hero-preview-container">
+              <!-- Window Chrome Header -->
+              <div class="preview-browser-header">
+                <div class="browser-dots">
+                  <span class="browser-dot" style="background-color: #EF4444;"></span>
+                  <span class="browser-dot" style="background-color: #F59E0B;"></span>
+                  <span class="browser-dot" style="background-color: #10B981;"></span>
+                </div>
+                <div class="preview-address-bar">
+                  <span data-icon="lock"></span>
+                  <span>scamshield.ai/sample-audit</span>
+                </div>
+                <span class="demo-tag">Demo · Not a live scan</span>
+              </div>
+
+              <!-- Product Preview Card Body -->
+              <div class="preview-card-body">
+                <!-- Risk Header -->
+                <div class="preview-risk-header">
+                  <div>
+                    <span class="badge badge-danger">Example outcome · Elevated risk</span>
+                    <div class="preview-msg-title">Sample: Urgent Bank KYC Suspension SMS</div>
+                  </div>
+                  <div class="preview-score-badge" title="Illustrative risk indicator">
+                    <span class="score-number">High</span>
+                  </div>
+                </div>
+
+                <!-- Suspicious Message Example -->
+                <div class="preview-message-box">
+                  <div class="preview-label">Example suspicious message</div>
+                  <p class="preview-message-text">
+                    "Dear Customer, Your NetBanking access will be blocked within 12 hours due to expired KYC documents. Click <u>http://sbi-secure-portal.top/kyc</u> immediately to avoid penalty."
+                  </p>
+                </div>
+
+                <!-- Example Warning Signs -->
+                <div class="preview-warning-signs">
+                  <div class="preview-label">Example warning signs</div>
+                  <div class="preview-tags-list">
+                    <span class="preview-tag tag-danger">
+                      <span data-icon="alertTriangle"></span> Artificial Urgency (12-hour strict deadline)
+                    </span>
+                    <span class="preview-tag tag-danger">
+                      <span data-icon="alertTriangle"></span> Deceptive Domain (.top registry masquerading as SBI)
+                    </span>
+                    <span class="preview-tag tag-caution">
+                      <span data-icon="alertCircle"></span> Unverified Credential Form Link
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Recommended Safety Action -->
+                <div class="preview-action-box">
+                  <span data-icon="shieldCheck" class="preview-action-icon"></span>
+                  <div>
+                    <strong>Recommended Safety Action:</strong>
+                    <p>Do not click the link or provide banking passwords. Verify account status strictly through your official bank application or local branch.</p>
+                  </div>
+                </div>
+
+                <!-- Demonstration Notice -->
+                <div class="preview-footer-note">
+                  <span data-icon="info"></span>
+                  <span>This is a product demonstration, not a live security scan.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Features Section (4 Beautiful Cards) -->
+      <section class="features-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Practical cyber safety</span>
+            <h2>Clearer decisions, one check at a time</h2>
+            <p>Useful tools for reviewing suspicious messages, links and incidents.</p>
+          </div>
+
+          <div class="feature-cards-grid">
+            
+            <!-- Feature 1: Message & Email Analysis -->
+            <div class="feature-item-card">
+              <div class="feature-icon-box" data-icon="messageSquare"></div>
+              <h3>Message & Email Analysis</h3>
+              <p>Review submitted messages for common pressure tactics, impersonation cues and suspicious wording.</p>
+              <button type="button" class="btn btn-outline btn-sm" data-view-target="view-checker" data-checker-mode="message">
+                Check a Message <span data-icon="arrowRight"></span>
+              </button>
+            </div>
+
+            <!-- Feature 2: Website URL Checker -->
+            <div class="feature-item-card">
+              <div class="feature-icon-box" data-icon="link"></div>
+              <h3>Website URL Checker</h3>
+              <p>Assess a URL's structure for common warning signs before opening an unfamiliar page.</p>
+              <button type="button" class="btn btn-outline btn-sm" data-view-target="view-checker" data-checker-mode="link">
+                Check a Link <span data-icon="arrowRight"></span>
+              </button>
+            </div>
+
+            <!-- Feature 3: Screenshot Analysis -->
+            <div class="feature-item-card">
+              <div class="feature-icon-box" data-icon="image"></div>
+              <h3>Screenshot Analysis</h3>
+              <p>Use a focused workflow to examine screenshots that contain suspicious messages or payment requests.</p>
+              <button type="button" class="btn btn-outline btn-sm" data-view-target="view-checker" data-checker-mode="screenshot">
+                Analyse Screenshot <span data-icon="arrowRight"></span>
+              </button>
+            </div>
+
+            <!-- Feature 4: AI Cyber Safety Assistant -->
+            <div class="feature-item-card">
+              <div class="feature-icon-box" data-icon="shieldCheck"></div>
+              <h3>Cyber Safety Guidance</h3>
+              <p>Find practical, scenario-based guidance for securing accounts and responding to a suspected incident.</p>
+              <button type="button" class="btn btn-outline btn-sm" data-view-target="view-recovery">
+                Get Safety Guidance <span data-icon="arrowRight"></span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section (3 Streamlined Steps) -->
+      <section id="how-it-works" class="how-it-works-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-badge">Simple 3-Step Process</span>
+            <h2>How It Works</h2>
+            <p>You don't need technical knowledge to verify suspicious content.</p>
+          </div>
+
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number-badge">01</div>
+              <h3>Submit suspicious content</h3>
+              <p>Paste message text, enter an unverified website URL, or upload a chat screenshot that seems alarming or suspicious.</p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-number-badge">02</div>
+              <h3>Analyse potential warning signs</h3>
+              <p>The checker looks for common warning patterns in the content you choose to submit.</p>
+            </div>
+
+            <div class="step-card">
+              <div class="step-number-badge">03</div>
+              <h3>Understand the risk and take safer action</h3>
+              <p>Review the findings, consider safer next steps, and verify important claims through official channels.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trust & Transparency Section -->
+      <section class="trust-section">
+        <div class="container">
+          <div class="trust-card">
+            <div>
+              <span class="section-badge">Your Safety & Privacy</span>
+              <h2>Trust & Transparency</h2>
+              <p style="font-size: var(--font-sm); color: var(--text-secondary); margin-bottom: 1.25rem;">
+                ScamShield AI assists users in identifying potential scam indicators. Results are guidance, not guarantees, and should be checked against trusted official sources.
+              </p>
+              <ul class="trust-list">
+                <li>
+                  <span data-icon="checkCircle"></span>
+                  <div>
+                    <strong style="color: var(--text-navy);">On-Demand Assistance:</strong>
+                    <span>ScamShield AI checks only content you choose to submit. It does not monitor private messages, WhatsApp or calls in the background.</span>
+                  </div>
+                </li>
+                <li>
+                  <span data-icon="checkCircle"></span>
+                  <div>
+                    <strong style="color: var(--text-navy);">No Absolute Guarantees:</strong>
+                    <span>Findings can help surface warning signs, but no result can guarantee that content is safe or fraudulent.</span>
+                  </div>
+                </li>
+                <li>
+                  <span data-icon="lock"></span>
+                  <div>
+                    <strong style="color: var(--text-navy);">On-demand server checks, local reports:</strong>
+                    <span>Message, URL and screenshot checks are sent to this app's Flask server for heuristic analysis. Saved reports stay in this browser. Nothing is sent to a marketing database.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Indian Emergency Helpline Card -->
+            <div style="background-color: #F8FAFC; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.75rem;">
+              <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                <span data-icon="shieldAlert" style="color: var(--accent-primary);"></span>
+                <span class="badge badge-danger">National Cyber Helpline</span>
+              </div>
+              <h3 style="font-size: var(--font-base); color: var(--text-navy); margin-bottom: 0.4rem;">
+                Citizen Financial Cyber Fraud (India)
+              </h3>
+              <p style="font-size: var(--font-xs); color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.55;">
+                If you have transferred funds or experienced cyber fraud, contact the national cyber helpline immediately (24x7).
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 1.75rem; font-weight: 800; color: #DC2626; margin-bottom: 1.15rem;">
+                Dial 1930
+              </div>
+              <div style="display: flex; gap: 0.65rem; flex-wrap: wrap;">
+                <a href="tel:1930" class="btn btn-danger btn-sm">Call 1930</a>
+                <button type="button" class="btn btn-outline btn-sm" data-view-target="view-recovery">
+                  View Recovery Steps
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+
+    <!-- --------------------------------------------------------------------
+         VIEW 2: MAIN SCAM CHECKER (THE CORE UX FEATURE)
+         -------------------------------------------------------------------- -->
+    <section id="view-checker" class="view-panel">
+      <div class="container checker-container">
+        
+        <div class="checker-header">
+          <h2>Let's check if it's a scam.</h2>
+          <p>Choose what you want to check.</p>
+        </div>
+
+        <!-- Segmented Mode Control -->
+        <div class="checker-segmented-control" role="tablist">
+          <button type="button" class="segmented-tab-btn active" data-mode="message" role="tab" aria-selected="true">
+            <span data-icon="messageSquare"></span> Message / Email
+          </button>
+          <button type="button" class="segmented-tab-btn" data-mode="link" role="tab" aria-selected="false">
+            <span data-icon="link"></span> Website Link
+          </button>
+          <button type="button" class="segmented-tab-btn" data-mode="sandbox" role="tab" aria-selected="false">
+            <span data-icon="shieldAlert"></span> ScamBait Sandbox
+          </button>
+          <button type="button" class="segmented-tab-btn" data-mode="screenshot" role="tab" aria-selected="false">
+            <span data-icon="image"></span> Screenshot
+          </button>
+        </div>
+
+        <!-- ================================================================
+             MODE A: MESSAGE / EMAIL INPUT (Visible when message is selected)
+             ================================================================ -->
+        <div id="checker-mode-message" class="checker-mode-panel active-mode card">
+          <div class="card-header">
+            <span class="card-title"><span data-icon="messageSquare"></span> Message / Email Check</span>
+            <span style="font-size: var(--font-xs); color: var(--text-muted);">Paste or choose an example below</span>
+          </div>
+          <div class="card-body">
+            
+            <!-- Quick preset sample buttons -->
+            <div style="margin-bottom: 1rem;">
+              <label class="form-label">Try an example message:</label>
+              <div class="preset-chips-container" id="message-preset-chips">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+
+            <form id="message-checker-form">
+              <div class="form-group">
+                <label for="message-input" class="form-label">Suspicious Message or Email Content:</label>
+                <textarea 
+                  id="message-input" 
+                  class="textarea-field" 
+                  placeholder="Paste a suspicious message or email here..." 
+                  rows="6"
+                  required
+                ></textarea>
+                <div class="form-hint">Tip: Include the full message text, sender name or numbers mentioned.</div>
+              </div>
+
+              <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+                <button type="button" class="btn btn-outline" id="clear-message-btn">Clear</button>
+                <button type="submit" class="btn btn-primary" id="analyze-message-btn">
+                  <span data-icon="shield"></span> Analyse Message
+                </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+        <!-- ================================================================
+             MODE B: WEBSITE LINK INPUT (Visible when link is selected)
+             ================================================================ -->
+        <div id="checker-mode-link" class="checker-mode-panel card">
+          <div class="card-header">
+            <span class="card-title"><span data-icon="link"></span> Website Link Check</span>
+            <span style="font-size: var(--font-xs); color: var(--text-muted);">Check link safety before clicking</span>
+          </div>
+          <div class="card-body">
+            
+            <div style="margin-bottom: 1rem;">
+              <label class="form-label">Try an example link:</label>
+              <div class="preset-chips-container" id="link-preset-chips">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+
+            <form id="link-checker-form">
+              <div class="form-group">
+                <label for="link-input" class="form-label">Website Address (URL):</label>
+                <div class="input-group">
+                  <span class="input-icon-left" data-icon="link"></span>
+                  <input 
+                    type="text" 
+                    id="link-input" 
+                    class="input-field has-icon-left" 
+                    placeholder="Paste the website link here (e.g. https://example.com)..." 
+                    required
+                  >
+                </div>
+                <div class="form-hint">We check for fake brand lookalikes, unencrypted HTTP, and high-risk domain extensions.</div>
+              </div>
+
+              <div style="display: flex; justify-content: flex-end;">
+                <button type="submit" class="btn btn-primary" id="analyze-link-btn">
+                  <span data-icon="shield"></span> Check Link
+                </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+        <!-- ================================================================
+             MODE C: SCAMBAIT SANDBOX (Local URL pattern inspection; no live fetch)
+             ================================================================ -->
+        <div id="checker-mode-sandbox" class="checker-mode-panel card">
+          <div class="card-header">
+            <span class="card-title"><span data-icon="shieldAlert"></span> ScamBait Sandbox</span>
+            <span class="badge badge-neutral">Local URL patterns</span>
+          </div>
+          <div class="card-body">
+            <div class="alert alert-info" role="status" style="margin-bottom: 1.25rem;">
+              <div class="alert-icon" data-icon="info"></div>
+              <div>
+                <strong>ScamBait Sandbox uses local URL pattern analysis</strong>
+                <p style="font-size: var(--font-xs); margin-top: 2px;">
+                  No URL will be fetched or opened. The result is based on URL patterns and does not verify the live website.
+                </p>
+              </div>
+            </div>
+
+            <form id="sandbox-inspection-form">
+              <div class="form-group">
+                <label for="sandbox-url-input" class="form-label">Website Address (URL):</label>
+                <div class="input-group">
+                  <span class="input-icon-left" data-icon="link"></span>
+                  <input type="text" id="sandbox-url-input" class="input-field has-icon-left" placeholder="https://example.com" autocomplete="url" spellcheck="false">
+                </div>
+              </div>
+              <div style="display: flex; justify-content: flex-end;">
+                <button type="button" class="btn btn-primary" id="sandbox-inspect-btn">
+                  <span data-icon="shield"></span> Inspect Link
+                </button>
+              </div>
+            </form>
+
+            <section class="sandbox-results-area" id="sandbox-results-container" aria-live="polite" aria-labelledby="sandbox-results-title">
+              <h3 id="sandbox-results-title">Sandbox Results</h3>
+              <dl class="sandbox-results-grid">
+                <div>
+                  <dt>Redirect chain</dt>
+                  <dd id="sandbox-redirect-chain">Not run. No URL was fetched or opened.</dd>
+                </div>
+                <div>
+                  <dt>Final URL</dt>
+                  <dd id="sandbox-final-url">Not available.</dd>
+                </div>
+                <div>
+                  <dt>Screenshot preview</dt>
+                  <dd id="sandbox-screenshot-preview">No screenshot captured.</dd>
+                </div>
+                <div>
+                  <dt>Suspicious indicators</dt>
+                  <dd id="sandbox-suspicious-indicators">Not checked yet.</dd>
+                </div>
+                <div>
+                  <dt>Risk assessment</dt>
+                  <dd id="sandbox-risk-assessment">Not assessed yet.</dd>
+                </div>
+              </dl>
+            </section>
+          </div>
+        </div>
+
+        <!-- ================================================================
+             MODE D: SCREENSHOT UPLOAD (Visible when screenshot is selected)
+             ================================================================ -->
+        <div id="checker-mode-screenshot" class="checker-mode-panel card">
+          <div class="card-header">
+            <span class="card-title"><span data-icon="image"></span> Screenshot Check</span>
+            <button type="button" class="btn btn-outline btn-sm" id="load-sample-screenshot-btn">
+              Try Sample Screenshot (offline demo)
+            </button>
+          </div>
+          <div class="card-body">
+            
+            <input type="file" id="screenshot-file-input" accept=".jpg,.jpeg,.png,.webp,.pdf,image/jpeg,image/png,image/webp,application/pdf" style="display: none;">
+
+            <!-- Drag & Drop Area -->
+            <div class="dropzone-container" id="screenshot-dropzone">
+              <div class="dropzone-icon" data-icon="upload"></div>
+              <h4 style="font-size: var(--font-base); margin-bottom: 0.25rem;">Drop your chat screenshot here</h4>
+              <p style="font-size: var(--font-xs); color: var(--text-secondary); margin-bottom: 0.5rem;">
+                JPG/JPEG, PNG and WEBP up to 5 MB. PDF up to 10 MB. Image OCR requires Tesseract on the server; PDFs remain preview-only.
+              </p>
+              <p id="screenshot-ocr-status" class="form-hint" style="margin-bottom: 1rem;">Checking OCR status on the analysis server...</p>
+              <button type="button" class="btn btn-secondary btn-sm" id="browse-screenshot-btn">
+                Browse Files
+              </button>
+            </div>
+
+            <!-- Selected File Preview -->
+            <div id="screenshot-preview-container" style="display: none; margin-top: 1rem;">
+              <div class="image-preview-wrapper" id="screenshot-image-preview">
+                <img id="screenshot-preview-img" src="" alt="Selected screenshot preview">
+              </div>
+              <div class="screenshot-file-details" id="screenshot-file-details">
+                <span class="pdf-indicator" id="screenshot-pdf-indicator" style="display: none;">PDF</span>
+                <div class="screenshot-file-meta">
+                  <strong id="screenshot-file-name"></strong>
+                  <span id="screenshot-file-size"></span>
+                </div>
+              </div>
+              <p class="screenshot-analysis-note" id="screenshot-analysis-note" style="display: none;">
+                Image text is sent to server OCR when Tesseract is configured. PDF content analysis is not available.
+              </p>
+              <div class="screenshot-preview-actions">
+                <button type="button" class="btn btn-outline btn-sm" id="replace-screenshot-btn">Replace file</button>
+                <button type="button" class="btn btn-outline btn-sm" id="remove-screenshot-btn">
+                  <span data-icon="trash"></span> Remove
+                </button>
+                <button type="button" class="btn btn-primary" id="analyze-screenshot-btn" style="display: none;">
+                  <span data-icon="shield"></span> <span id="screenshot-action-label">Analyse Sample</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- OCR Progress Bar -->
+            <div id="screenshot-progress-wrap" style="display: none; margin-top: 1.25rem;">
+              <div style="display: flex; justify-content: space-between; font-size: var(--font-xs); margin-bottom: 0.35rem;">
+                <span>Running the offline sample demonstration...</span>
+              </div>
+              <div class="risk-meter-bar-bg">
+                <div id="screenshot-progress-bar" class="risk-meter-bar-fill fill-safe" style="width: 0%; transition: width 0.3s ease;"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ================================================================
+             ANALYSIS RESULTS INTERFACE (Appears below after checking)
+             ================================================================ -->
+        <div id="checker-results-container" class="results-card" style="display: none;">
+          
+          <div class="results-hero-header">
+            <div class="risk-level-display">
+              <span id="res-risk-badge" class="badge badge-neutral">PENDING</span>
+              <div>
+                <span style="font-size: var(--font-xs); color: var(--text-secondary); display: block;">Risk Score:</span>
+                <span class="risk-score-pill" id="res-risk-score">0/100</span>
+              </div>
+            </div>
+            <div class="analysis-category-display">
+              <span>Primary matching pattern</span>
+              <strong id="res-category">No known pattern matched</strong>
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+              <button type="button" class="btn btn-outline btn-sm open-report-modal-btn">
+                <span data-icon="fileText"></span> View Full Report
+              </button>
+            </div>
+          </div>
+
+          <div class="results-content-body">
+            
+            <!-- Risk Score Meter -->
+            <div class="risk-meter" style="margin-bottom: 1.5rem;">
+              <div class="risk-meter-bar-bg">
+                <div id="res-meter-fill" class="risk-meter-bar-fill fill-safe" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <!-- Plain English Explanation -->
+            <div style="margin-bottom: 1.5rem;">
+              <h4 style="font-size: var(--font-base); margin-bottom: 0.35rem;">Summary:</h4>
+              <p id="res-summary" style="font-size: var(--font-sm); line-height: 1.6; color: var(--text-primary);"></p>
+            </div>
+
+            <div id="res-extracted-text-wrap" class="extracted-text-section" style="display: none;">
+              <h4>Text extracted from screenshot</h4>
+              <pre id="res-extracted-text"></pre>
+            </div>
+
+            <!-- Warning Signs Detected -->
+            <div style="margin-bottom: 1.75rem;">
+              <h4 style="font-size: var(--font-base); margin-bottom: 0.75rem;">Detected Warning Signs:</h4>
+              <div class="warning-signs-grid" id="res-warning-signs">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+
+            <!-- Scam Risk Timeline -->
+            <div style="margin-bottom: 1.75rem;">
+              <h4 style="font-size: var(--font-base); margin-bottom: 0.75rem;">Scam Pattern Timeline:</h4>
+              <p style="font-size: var(--font-xs); color: var(--text-secondary); margin-bottom: 1rem;">
+                Shows stages detected in this specific message.
+              </p>
+              <div class="scam-timeline" id="res-timeline">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+
+            <!-- Recommended Next Steps -->
+            <div style="margin-bottom: 1.75rem;">
+              <h4 style="font-size: var(--font-base); margin-bottom: 0.75rem;">Recommended Next Steps:</h4>
+              <ul id="res-recommendations" style="list-style: none;">
+                <!-- Rendered dynamically -->
+              </ul>
+            </div>
+
+            <!-- Safe Reply Generator -->
+            <div style="margin-bottom: 1.5rem;">
+              <h4 style="font-size: var(--font-base); margin-bottom: 0.5rem;">Safe Response Options:</h4>
+              <p style="font-size: var(--font-xs); color: var(--text-secondary); margin-bottom: 0.75rem;">
+                If you feel pressured to reply, here are safe responses, or you can choose not to respond at all.
+              </p>
+              <div id="res-replies">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+
+            <!-- Honest Disclaimer -->
+            <div class="alert alert-warning" style="margin-bottom: 0;">
+              <div class="alert-icon" data-icon="alertTriangle"></div>
+              <div>
+                <strong>Important Safety Note:</strong>
+                <p id="res-disclaimer" style="font-size: var(--font-xs); margin-top: 2px;"></p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- --------------------------------------------------------------------
+         VIEW 3: MY REPORTS
+         -------------------------------------------------------------------- -->
+    <section id="view-reports" class="view-panel">
+      <div class="container reports-container">
+        
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.75rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h2>My Analysis Reports</h2>
+            <p style="font-size: var(--font-sm); color: var(--text-secondary);">
+              Review previous checks on this device. All records remain stored locally in your browser.
+            </p>
+          </div>
+          <div style="display: flex; gap: 0.75rem;">
+            <button type="button" class="btn btn-outline btn-sm" id="clear-reports-btn">
+              <span data-icon="trash"></span> Clear Reports
+            </button>
+            <button type="button" class="btn btn-primary btn-sm" data-view-target="view-checker">
+              <span data-icon="shield"></span> New Check
+            </button>
+          </div>
+        </div>
+
+        <div class="reports-table-card">
+          <div class="history-table-wrapper">
+            <table class="reports-table">
+              <thead>
+                <tr>
+                  <th>Date & Time</th>
+                  <th>Type</th>
+                  <th>Content Preview</th>
+                  <th>Risk Level</th>
+                  <th style="text-align: right;">Action</th>
+                </tr>
+              </thead>
+              <tbody id="reports-table-body">
+                <!-- Rendered dynamically -->
+              </tbody>
+            </table>
+            
+            <div id="reports-empty-state" style="padding: 3rem 1.5rem; text-align: center; display: none;">
+              <div style="width: 48px; height: 48px; border-radius: 50%; background: #F1F5F9; color: var(--text-muted); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 0.75rem;" data-icon="info"></div>
+              <h3 style="font-size: var(--font-md); margin-bottom: 0.35rem;">No reports saved yet</h3>
+              <p style="font-size: var(--font-sm); color: var(--text-secondary); margin-bottom: 1.25rem;">
+                When you check a message, link or screenshot, your report will appear here.
+              </p>
+              <button type="button" class="btn btn-primary btn-sm" data-view-target="view-checker">
+                Check Your First Scam
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- --------------------------------------------------------------------
+         VIEW 4: INCIDENT RECOVERY HELP (INDIA & GLOBAL)
+         -------------------------------------------------------------------- -->
+    <section id="view-recovery" class="view-panel">
+      <div class="container recovery-container">
+        
+        <div style="margin-bottom: 1.75rem;">
+          <h2>Incident Recovery Help</h2>
+          <p style="font-size: var(--font-sm); color: var(--text-secondary);">
+            If you or someone you know has interacted with a suspicious message, follow these practical containment steps.
+          </p>
+        </div>
+
+        <!-- 1930 Helpline Banner -->
+        <div class="helpline-callout-banner">
+          <div>
+            <span class="badge badge-danger" style="margin-bottom: 0.5rem;">Official Indian Government Helpline</span>
+            <h3 style="font-size: var(--font-lg); color: #991B1B; margin-bottom: 0.25rem;">National Cyber Crime Helpline: 1930</h3>
+            <p style="font-size: var(--font-xs); color: #7F1D1D; line-height: 1.5;">
+              If you have transferred money or experienced financial fraud, dial 1930 immediately (24x7). Acting within the Golden Hour increases the chance that destination accounts can be frozen.
+            </p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-end;">
+            <div class="helpline-number-text">1930</div>
+            <a href="tel:1930" class="btn btn-danger btn-sm">Call 1930 Now</a>
+          </div>
+        </div>
+
+        <!-- 4 Scenarios Selector -->
+        <label class="form-label">What happened?</label>
+        <div class="recovery-grid">
+          
+          <div class="recovery-card-btn selected" data-recovery-category="link">
+            <div class="recovery-icon-circle" data-icon="link"></div>
+            <strong style="font-size: var(--font-sm);">Clicked a link / APK</strong>
+            <span style="font-size: var(--font-xs); color: var(--text-muted);">Opened a suspicious page</span>
+          </div>
+
+          <div class="recovery-card-btn" data-recovery-category="otp">
+            <div class="recovery-icon-circle" data-icon="lock"></div>
+            <strong style="font-size: var(--font-sm);">Shared an OTP / PIN</strong>
+            <span style="font-size: var(--font-xs); color: var(--text-muted);">Gave a security code</span>
+          </div>
+
+          <div class="recovery-card-btn" data-recovery-category="payment">
+            <div class="recovery-icon-circle" data-icon="shieldAlert"></div>
+            <strong style="font-size: var(--font-sm);">Sent money / UPI</strong>
+            <span style="font-size: var(--font-xs); color: var(--text-muted);">Transferred funds</span>
+          </div>
+
+          <div class="recovery-card-btn" data-recovery-category="personal_id">
+            <div class="recovery-icon-circle" data-icon="fileText"></div>
+            <strong style="font-size: var(--font-sm);">Shared Aadhaar / PAN</strong>
+            <span style="font-size: var(--font-xs); color: var(--text-muted);">Identity details shared</span>
+          </div>
+
+        </div>
+
+        <!-- Containment Steps Box -->
+        <div class="card" style="margin-bottom: 2rem;">
+          <div class="card-header">
+            <div>
+              <span class="card-title" id="recovery-scenario-title">Action Plan</span>
+              <span id="recovery-scenario-subtitle" style="font-size: var(--font-xs); color: var(--text-muted);"></span>
+            </div>
+          </div>
+          <div class="card-body">
+            
+            <div class="alert alert-warning">
+              <div class="alert-icon" data-icon="alertTriangle"></div>
+              <div>
+                <strong>Beware of Recovery Scams:</strong>
+                <p style="font-size: var(--font-xs); margin-top: 2px;">
+                  Never pay private "hackers" or agents claiming they can retrieve lost money. Official recovery can only be processed through your bank and the national 1930 portal.
+                </p>
+              </div>
+            </div>
+
+            <h4 style="font-size: var(--font-sm); margin-bottom: 1rem;">Recommended Steps:</h4>
+            <div id="recovery-steps-list">
+              <!-- Rendered dynamically -->
+            </div>
+
+            <h4 style="font-size: var(--font-sm); margin: 1.5rem 0 0.75rem 0;">Official Helplines & Portals:</h4>
+            <div id="recovery-helplines-list" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <!-- Rendered dynamically -->
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- --------------------------------------------------------------------
+         VIEW 5: ABOUT SCAMSHIELD AI
+         -------------------------------------------------------------------- -->
+    <section id="view-about" class="view-panel">
+      <div class="container about-container">
+        
+        <div class="about-card">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <div class="brand-icon-wrap" data-icon="shield"></div>
+            <div>
+              <h2 style="font-size: var(--font-xl);">About ScamShield AI</h2>
+              <span style="font-size: var(--font-xs); color: var(--accent-primary); font-weight: 600;">Think Before You Trust</span>
+            </div>
+          </div>
+
+          <h3>Our Mission</h3>
+          <p>
+            ScamShield AI is designed to protect everyday people—including students, parents, working professionals, and seniors—from digital extortion, fake job scams, electricity bill fraud, and banking phishing. We believe cybersecurity should be simple, welcoming, and clear.
+          </p>
+
+          <h3>How It Works</h3>
+          <p>
+            Message, URL and screenshot checks are analysed by the Flask server using deterministic heuristics: language-coercion patterns (urgent deadlines, threats of arrest, utility disconnection), and deceptive website-address structure. The built-in screenshot sample can run as an offline demonstration if Tesseract is not installed. Saved reports stay in this browser.
+          </p>
+
+          <h3>Our Limitations (Transparency First)</h3>
+          <p>
+            ScamShield AI does <strong>not</strong> monitor your WhatsApp, SMS, or phone calls in the background. It only analyses the specific content you choose to submit. It does not use a live AI model or threat-intelligence feed. Risk scores reflect heuristic proximity to known fraud patterns and should never replace personal skepticism or direct verification with official organizations.
+          </p>
+
+          <div style="margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <span style="font-size: var(--font-xs); color: var(--text-secondary);">Need to check something?</span>
+            <button type="button" class="btn btn-primary btn-sm" data-view-target="view-checker">
+              Check a Scam Now
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       MODAL: FULL AUDIT REPORT & EXPORT
+       ======================================================================== -->
+  <div class="modal-backdrop" id="report-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <span class="card-title"><span data-icon="fileText"></span> ScamShield Analysis Report</span>
+        <button type="button" class="btn btn-ghost btn-sm close-modal-btn" aria-label="Close dialog" data-icon="x"></button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: var(--font-xs); color: var(--text-secondary); margin-bottom: 0.75rem;">
+          Formal structured incident assessment formatted for personal records or reporting to authorities.
+        </p>
+        <pre id="report-modal-content" style="background: #F8FAFC; padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); color: var(--text-primary); font-size: 0.75rem; overflow-x: auto; white-space: pre-wrap; max-height: 48vh;"></pre>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline btn-sm" id="print-report-btn">Print</button>
+        <button type="button" class="btn btn-secondary btn-sm" id="copy-report-text-btn"><span data-icon="copy"></span> Copy Text</button>
+        <button type="button" class="btn btn-primary btn-sm" id="download-report-btn"><span data-icon="download"></span> Download .TXT</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- ========================================================================
+       CLEAN LIGHT FOOTER
+       ======================================================================== -->
+  <footer class="app-footer">
+    <div class="container">
+      <div class="footer-top">
+        
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-icon-wrap" data-icon="shield"></div>
+            <div class="brand-text-block">
+              <span class="brand-name">ScamShield <span>AI</span></span>
+              <span class="brand-tagline-micro">Think Before You Trust</span>
+            </div>
+          </div>
+          <p>
+            Helping people stay safe from digital fraud, suspicious messages, and deceptive links with transparent cyber intelligence.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-heading">Tools</div>
+          <ul class="footer-links">
+            <li><a href="#" data-view-target="view-checker" data-checker-mode="message">Message Checker</a></li>
+            <li><a href="#" data-view-target="view-checker" data-checker-mode="link">Link Checker</a></li>
+            <li><a href="#" data-view-target="view-checker" data-checker-mode="screenshot">Screenshot Analyzer</a></li>
+            <li><a href="#" data-view-target="view-reports">My Reports</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Emergency Helplines (IN)</div>
+          <ul class="footer-links">
+            <li><a href="tel:1930">Cyber Crime Helpline: 1930</a></li>
+            <li><a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">cybercrime.gov.in</a></li>
+            <li><a href="https://sancharsaathi.gov.in" target="_blank" rel="noopener noreferrer">Sanchar Saathi (Chakshu)</a></li>
+            <li><a href="https://sachet.rbi.org.in" target="_blank" rel="noopener noreferrer">RBI Sachet Portal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Explore</div>
+          <ul class="footer-links">
+            <li><a href="#home" data-view-target="view-home">Home</a></li>
+            <li><a href="#checker" data-view-target="view-checker">Check a Scam</a></li>
+            <li><a href="#reports" data-view-target="view-reports">My Reports</a></li>
+            <li><a href="#recovery" data-view-target="view-recovery">Recovery Help</a></li>
+            <li><a href="#about" data-view-target="view-about">About</a></li>
+            <li><a href="#" class="open-report-modal-btn">Audit Methodology</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 ScamShield AI. All rights reserved. Think Before You Trust.</div>
+        <div>
+          <strong>Disclaimer:</strong> ScamShield AI provides heuristic evaluations to help users spot common warning signs. It does not replace personal judgment, bank verification, or law enforcement reporting.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/icons.js"></script>
+  <script src="js/dataset.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/report.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
